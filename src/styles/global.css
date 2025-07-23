@@ -1,39 +1,206 @@
 @import "tailwindcss";
 
-/* @theme { */
-:root {
+/* :root { */
+@theme {
 	/* 
 	 * Variables de color para el tema de la aplicación.
 	 * Estos colores se utilizan en todo el sitio web para mantener una coherencia visual.
 	 */
-		
-	--color-principal	:	#005BCD;	/* blue */
-	--color-secondary	:	#6BF6FB;
-	--color-white		:	#FFFFFF;
-	--color-black		:	#021627;
-	--color-shadow		:	#1D3D63;
 
-	--color-info		:	#005BCD;	/* blue */
-	--color-success		:	#D4F670;	/* flowpay-green */
-	--color-warning		:	#F17930;	/* orange */
-	--color-danger		:	#ED462F;	/* red */
+	--color-ux-primary			:	var(--color-ux-denim)
+	--color-ux-secondary		:	var(--color-ux-denim-300)
+	--color-ux-info				:	var(--color-ux-denim-700)
+	--color-ux-success			:	var(--color-ux-greenyel)
+	--color-ux-warning			:	var(--color-ux-scarlet)
+	--color-ux-danger			:	var(--color-ux-bordeaux)
+	--color-ux-shadow			:	var(--color-ux-pickled-950)
+
+	--color-ux-muted			:	var(--color-ux-radical-50)
+	--color-ux-accent			:	var(--color-ux-denim-200)
+	--color-ux-destructive		:	var(--color-ux-radical-600)
+	--color-ux-transparent		:	var(--color-ux-mercury)
+
+	--color-ux-white			:	var(--color-ux-mercury-50)
+	--color-ux-black			:	var(--color-ux-pickled-950)
+
+	--color-ux-sky				:	var(--color-ux-denim-100)
+	--color-ux-light			:	var(--color-ux-tidal)
+	--color-ux-gray				:	var(--color-ux-mercury)
+	--color-ux-dark				:	var(--color-ux-denim-950)
 	
-	--color-sky			:	#D1ECEE;	/* dalto-sky */
-	--color-light		:	#EBF2D0;	/* flowpay-lime */
-	--color-gray		:	#C2C7C5;	/* flowpay-gray */
-	--color-dark		:	#101E29;	/* flowpay-darkblue */
+	--color-ux-blue				:	var(--color-ux-denim)
+	--color-ux-darkblue			:	var(--color-ux-denim-950)
+	--color-ux-yellow			:	var(--color-ux-lemon)
+	--color-ux-lime				:	var(--color-ux-tidal)
+	--color-ux-green			:	var(--color-ux-greenyel)
+	--color-ux-darkgreen		:	var(--color-ux-greenyel-950)
+	--color-ux-violet			:	var(--color-ux-eleviol)
+	--color-ux-fuxcia			:	var(--color-ux-magentfus)
+	--color-ux-orange			:	var(--color-ux-scarlet-400)
+	--color-ux-red				:	var(--color-ux-radical)
+
+	--color-ux-textdark			:	var(--color-ux-denim-950)
+	--color-ux-textmed			:	var(--color-ux-pickled-400)
+	--color-ux-textlight		:	var(--color-ux-denim-100)
+
+	/* 
+	 * uicolor -ux- Variables de color personalizadas
+	*/
+
+	--color-ux-denim			:	#005BCD;		/* --color-denim */
+	--color-ux-denim-50			:	#ECFAFF;		/* --color-denim-50 */
+	--color-ux-denim-100		:	#D4F2FF;		/* --color-denim-100 */
+	--color-ux-denim-200		:	#B2EAFF;		/* --color-denim-200 */
+	--color-ux-denim-300		:	#7DDFFF;		/* --color-denim-300 */
+	--color-ux-denim-400		:	#40CAFF;		/* --color-denim-400 */
+	--color-ux-denim-500		:	#14AAFF;		/* --color-denim-500 */
+	--color-ux-denim-600		:	#0089FF;		/* --color-denim-600 */
+	--color-ux-denim-700		:	#0071FF;		/* --color-denim-700 */
+	--color-ux-denim-800		:	#005BCD;		/* --color-denim-800 */
+	--color-ux-denim-900		:	#084FA0;		/* --color-denim-900 */
+	--color-ux-denim-950		:	#0A3061;		/* --color-denim-950 */
 	
-	--color-blue		:	#005BCD;	/* exped-blue */
-	--color-darkblue	:	#0A1832;	/* exped-darkblue */
-	--color-lime		:	#EBF2D0;	/* flowpay-lime */
-	--color-green		:	#B9FF66;	/* positivus-green */
-	--color-darkgreen	:	#0F3338;	/* dalto-darkgreen */
-	--color-violet		:	#3245FF;
-	--color-fuxcia		:	#BC52EE; 
-	--color-orange		:	#F17930;	/* exped-orange */
-	--color-red			:	#ED462F;	/* exped-red */
+	--color-ux-pickled			:	#7B96B5;		/* --color-pickled-bluewood */
+	--color-ux-pickled-50		:	#F5F7FA;		/* --color-pickled-bluewood-50 */
+	--color-ux-pickled-100		:	#EAEEF4;		/* --color-pickled-bluewood-100 */
+	--color-ux-pickled-200		:	#D1DAE6;		/* --color-pickled-bluewood-200 */
+	--color-ux-pickled-300		:	#A9BAD0;		/* --color-pickled-bluewood-300 */
+	--color-ux-pickled-400		:	#7B96B5;		/* --color-pickled-bluewood-400 */
+	--color-ux-pickled-500		:	#5B7A9C;		/* --color-pickled-bluewood-500 */
+	--color-ux-pickled-600		:	#476182;		/* --color-pickled-bluewood-600 */
+	--color-ux-pickled-700		:	#3A4F6A;		/* --color-pickled-bluewood-700 */
+	--color-ux-pickled-800		:	#324257;		/* --color-pickled-bluewood-800 */
+	--color-ux-pickled-900		:	#2E3A4C;		/* --color-pickled-bluewood-900 */
+	--color-ux-pickled-950		:	#1F2632;		/* --color-pickled-bluewood-950 */
+
+	--color-ux-mercury			:	#DFE2E1;		/* --color-mercury */
+	--color-ux-mercury-50		:	#F7F8F7;		/* --color-mercury-50 */
+	--color-ux-mercury-100		:	#EEF0F0;		/* --color-mercury-100 */
+	--color-ux-mercury-200		:	#DFE2E1;		/* --color-mercury-200 */
+	--color-ux-mercury-300		:	#B9C0BD;		/* --color-mercury-300 */
+	--color-ux-mercury-400		:	#939D99;		/* --color-mercury-400 */
+	--color-ux-mercury-500		:	#76817D;		/* --color-mercury-500 */
+	--color-ux-mercury-600		:	#5F6A67;		/* --color-mercury-600 */
+	--color-ux-mercury-700		:	#4E5654;		/* --color-mercury-700 */
+	--color-ux-mercury-800		:	#434947;		/* --color-mercury-800 */
+	--color-ux-mercury-900		:	#3A403E;		/* --color-mercury-900 */
+	--color-ux-mercury-950		:	#272A29;		/* --color-mercury-950 */
+
+	--color-ux-radical			:	#FF1A6A;		/* --color-radical-red */
+	--color-ux-radical-50		:	#FFF0F4;		/* --color-radical-red-50 */
+	--color-ux-radical-100		:	#FFE2EA;		/* --color-radical-red-100 */
+	--color-ux-radical-200		:	#FFCADA;		/* --color-radical-red-200 */
+	--color-ux-radical-300		:	#FF9FBC;		/* --color-radical-red-300 */
+	--color-ux-radical-400		:	#FF699A;		/* --color-radical-red-400 */
+	--color-ux-radical-500		:	#FF1A6A;		/* --color-radical-red-500 */
+	--color-ux-radical-600		:	#ED1168;		/* --color-radical-red-600 */
+	--color-ux-radical-700		:	#C80859;		/* --color-radical-red-700 */
+	--color-ux-radical-800		:	#A80951;		/* --color-radical-red-800 */
+	--color-ux-radical-900		:	#8F0C4B;		/* --color-radical-red-900 */
+	--color-ux-radical-950		:	#500125;		/* --color-radical-red-950 */
+
+	--color-ux-scarlet			:	#FF330F;		/* --color-scarlet */
+	--color-ux-scarlet-50		:	#FFF2ED;		/* --color-scarlet-50 */
+	--color-ux-scarlet-100		:	#FFE2D4;		/* --color-scarlet-100 */
+	--color-ux-scarlet-200		:	#FFC0A8;		/* --color-scarlet-200 */
+	--color-ux-scarlet-300		:	#FF9570;		/* --color-scarlet-300 */
+	--color-ux-scarlet-400		:	#FF5D37;		/* --color-scarlet-400 */
+	--color-ux-scarlet-500		:	#FF330F;		/* --color-scarlet-500 */
+	--color-ux-scarlet-600		:	#F01906;		/* --color-scarlet-600 */
+	--color-ux-scarlet-700		:	#C70D07;		/* --color-scarlet-700 */
+	--color-ux-scarlet-800		:	#9E0E0F;		/* --color-scarlet-800 */
+	--color-ux-scarlet-900		:	#7F0F0F;		/* --color-scarlet-900 */
+	--color-ux-scarlet-950		:	#450508;		/* --color-scarlet-950 */
+
+	--color-ux-bordeaux			:	#ca0643;		/* --color-bordeaux */
+	--color-ux-bordeaux-50		:	#fff0f2;		/* --color-bordeaux-50 */
+	--color-ux-bordeaux-100		:	#ffe2e6;		/* --color-bordeaux-100 */
+	--color-ux-bordeaux-200		:	#ffcad4;		/* --color-bordeaux-200 */
+	--color-ux-bordeaux-300		:	#ff9eb1;		/* --color-bordeaux-300 */
+	--color-ux-bordeaux-400		:	#ff6788;		/* --color-bordeaux-400 */
+	--color-ux-bordeaux-500		:	#ff3264;		/* --color-bordeaux-500 */
+	--color-ux-bordeaux-600		:	#ef0f4f;		/* --color-bordeaux-600 */
+	--color-ux-bordeaux-700		:	#ca0643;		/* --color-bordeaux-700 */
+	--color-ux-bordeaux-800		:	#a90840;		/* --color-bordeaux-800 */
+	--color-ux-bordeaux-900		:	#900b3d;		/* --color-bordeaux-900 */
+	--color-ux-bordeaux-950		:	#610022;		/* --color-bordeaux-950 */
+
+	--color-ux-lemon			:	#fbff41;		/* --color-lemon */
+	--color-ux-lemon-50			:	#fdffe7;		/* --color-lemon-50 */
+	--color-ux-lemon-100		:	#f9ffc1;		/* --color-lemon-100 */
+	--color-ux-lemon-200		:	#f8ff86;		/* --color-lemon-200 */
+	--color-ux-lemon-300		:	#fbff41;		/* --color-lemon-300 */
+	--color-ux-lemon-400		:	#fff80d;		/* --color-lemon-400 */
+	--color-ux-lemon-500		:	#ffea00;		/* --color-lemon-500 */
+	--color-ux-lemon-600		:	#d1ae00;		/* --color-lemon-600 */
+	--color-ux-lemon-700		:	#a67d02;		/* --color-lemon-700 */
+	--color-ux-lemon-800		:	#89610a;		/* --color-lemon-800 */
+	--color-ux-lemon-900		:	#744f0f;		/* --color-lemon-900 */
+	--color-ux-lemon-950		:	#442a04;		/* --color-lemon-950 */
+
+	--color-ux-greenyel			:	#B9FF66;		/* --color-green-yellow */
+	--color-ux-greenyel-50		:	#F6FFE5;		/* --color-green-yellow-50 */
+	--color-ux-greenyel-100		:	#E9FFC7;		/* --color-green-yellow-100 */
+	--color-ux-greenyel-200		:	#D2FF95;		/* --color-green-yellow-200 */
+	--color-ux-greenyel-300		:	#B9FF66;		/* --color-green-yellow-300 */
+	--color-ux-greenyel-400		:	#94F625;		/* --color-green-yellow-400 */
+	--color-ux-greenyel-500		:	#73DD05;		/* --color-green-yellow-500 */
+	--color-ux-greenyel-600		:	#57B100;		/* --color-green-yellow-600 */
+	--color-ux-greenyel-700		:	#428605;		/* --color-green-yellow-700 */
+	--color-ux-greenyel-800		:	#37690B;		/* --color-green-yellow-800 */
+	--color-ux-greenyel-900		:	#2F590E;		/* --color-green-yellow-900 */
+	--color-ux-greenyel-950		:	#163201;		/* --color-green-yellow-950 */
 	
-	--color-textdark	:	#101E29;
-	--color-textlight	:	#D1ECEE;
+	--color-ux-tidal			:	#F0FFB3;		/* --color-tidal */
+	--color-ux-tidal-50			:	#FBFFE6;		/* --color-tidal-50 */
+	--color-ux-tidal-100		:	#F0FFB3;		/* --color-tidal-100 */
+	--color-ux-tidal-200		:	#E8FF97;		/* --color-tidal-200 */
+	--color-ux-tidal-300		:	#D5FB5B;		/* --color-tidal-300 */
+	--color-ux-tidal-400		:	#C0F12A;		/* --color-tidal-400 */
+	--color-ux-tidal-500		:	#A0D70B;		/* --color-tidal-500 */
+	--color-ux-tidal-600		:	#7DAC04;		/* --color-tidal-600 */
+	--color-ux-tidal-700		:	#5E8308;		/* --color-tidal-700 */
+	--color-ux-tidal-800		:	#4C670D;		/* --color-tidal-800 */
+	--color-ux-tidal-900		:	#3F5710;		/* --color-tidal-900 */
+	--color-ux-tidal-950		:	#203102;		/* --color-tidal-950 */
+
+	--color-ux-fusblue			:	#683EC3;		/* --color-fuchsia-blue */
+	--color-ux-fusblue-50		:	#F5F4FE;		/* --color-fuchsia-blue-50 */
+	--color-ux-fusblue-100		:	#EEECFB;		/* --color-fuchsia-blue-100 */
+	--color-ux-fusblue-200		:	#DEDBF9;		/* --color-fuchsia-blue-200 */
+	--color-ux-fusblue-300		:	#C5BEF4;		/* --color-fuchsia-blue-300 */
+	--color-ux-fusblue-400		:	#A899EC;		/* --color-fuchsia-blue-400 */
+	--color-ux-fusblue-500		:	#8A6FE3;		/* --color-fuchsia-blue-500 */
+	--color-ux-fusblue-600		:	#7F59D9;		/* --color-fuchsia-blue-600 */
+	--color-ux-fusblue-700		:	#683EC3;		/* --color-fuchsia-blue-700 */
+	--color-ux-fusblue-800		:	#5733A4;		/* --color-fuchsia-blue-800 */
+	--color-ux-fusblue-900		:	#492C86;		/* --color-fuchsia-blue-900 */
+	--color-ux-fusblue-950		:	#2C1A5B;		/* --color-fuchsia-blue-950 */
+
+	--color-ux-magentfus		:	#FF47F3;		/* --color-magenta-fuchsia */
+	--color-ux-magentfus-50		:	#FFF3FE;		/* --color-magenta-fuchsia-50 */
+	--color-ux-magentfus-100	:	#FFE6FE;		/* --color-magenta-fuchsia-100 */
+	--color-ux-magentfus-200	:	#FFCCFC;		/* --color-magenta-fuchsia-200 */
+	--color-ux-magentfus-300	:	#FFA3F7;		/* --color-magenta-fuchsia-300 */
+	--color-ux-magentfus-400	:	#FF6DF0;		/* --color-magenta-fuchsia-400 */
+	--color-ux-magentfus-500	:	#FF47F3;		/* --color-magenta-fuchsia-500 */
+	--color-ux-magentfus-600	:	#E316D1;		/* --color-magenta-fuchsia-600 */
+	--color-ux-magentfus-700	:	#BD0EAB;		/* --color-magenta-fuchsia-700 */
+	--color-ux-magentfus-800	:	#9A0E8A;		/* --color-magenta-fuchsia-800 */
+	--color-ux-magentfus-900	:	#7E116F;		/* --color-magenta-fuchsia-900 */
+	--color-ux-magentfus-950	:	#550049;		/* --color-magenta-fuchsia-950 */
+
+	--color-ux-eleviol			:	#5533FF;		/* --color-electric-violet */
+	--color-ux-eleviol-50		:	#EBEFFF;		/* --color-electric-violet-50 */
+	--color-ux-eleviol-100		:	#DBE0FF;		/* --color-electric-violet-100 */
+	--color-ux-eleviol-200		:	#BEC6FF;		/* --color-electric-violet-200 */
+	--color-ux-eleviol-300		:	#97A0FF;		/* --color-electric-violet-300 */
+	--color-ux-eleviol-400		:	#706EFF;		/* --color-electric-violet-400 */
+	--color-ux-eleviol-500		:	#5C4CFF;		/* --color-electric-violet-500 */
+	--color-ux-eleviol-600		:	#5533FF;		/* --color-electric-violet-600 */
+	--color-ux-eleviol-700		:	#4420E2;		/* --color-electric-violet-700 */
+	--color-ux-eleviol-800		:	#371DB6;		/* --color-electric-violet-800 */
+	--color-ux-eleviol-900		:	#30208F;		/* --color-electric-violet-900 */
+	--color-ux-eleviol-950		:	#1E1353;		/* --color-electric-violet-950 */
 
 }

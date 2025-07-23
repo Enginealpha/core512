@@ -1,6 +1,6 @@
 <!--  // ──────────────────────────────────────────────── -->
 
-# core510 &middot; Astro.build [5.10.1*]
+# core512 &middot; Astro.build [5.12.2*]
 
 ### **Tailwind - Typescript - Inter**
 
@@ -9,12 +9,12 @@
 
 ## Init
 
-- Instalamos framework [ver 5.10.*] con Pnpm
+- Instalamos framework [ver 5.12.*] con Pnpm
 
 - Opciones de instalacion elegidas
 
 	* Where should we create your new project?
-		core510
+		core512
 
 	* How would you like to start your new project?
 		A basic, minimal starter
@@ -29,7 +29,7 @@
 pnpm create astro@latest
 ````
 ````
-cd core510
+cd core512
 
 git init && git add . && git commit -m "Init"
 ````
@@ -459,8 +459,56 @@ git add . && git commit -m "Remote (github)"
 
 ````
 pnpm dlx @astrojs/upgrade
+````
 
+````
 git add . && git commit -m "Upgrade:astro dependencies (#011)"
+````
+
+<!--  // ──────────────────────────────────────────────── -->
+<!--  React Icons ─────────────────── -->
+
+## React Icons
+
+- Requerimos dependencias react icons
+
+````
+pnpm add react-icons
+
+pnpm add @react-icons/all-files
+````
+
+````
+git add . && git commit -m "Require: react icons (#012)"
+````
+
+<!--  // ──────────────────────────────────────────────── -->
+<!--  Github 512 ─────────────────── -->
+
+## GitHub 512
+
+- Quitamos la viculacion anterior
+- Vinculamos con el nuevo core de github
+- Push repositorio
+
+````
+git remote rm origin
+git remote add origin https://github.com/Enginealpha/core512.git
+git push origin master
+
+git add . && git commit -m "Remote (github 512)"
+````
+
+<!--  // ──────────────────────────────────────────────── -->
+<!--  Palettes ─────────────────── -->
+
+## Palettes
+
+- Ampliamos la paleta de colores en tailwind.config y global.css
+- Actualizamos los includes de nuestros views
+
+````
+git add . && git commit -m "update: palettes (#013)"
 ````
 
 <!--  // ──────────────────────────────────────────────── -->
