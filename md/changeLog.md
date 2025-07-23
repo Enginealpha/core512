@@ -451,3 +451,16 @@ git add . && git commit -m "Remote (github)"
 ````
 
 <!--  // ──────────────────────────────────────────────── -->
+<!--  Upgrade ─────────────────── -->
+
+## Upgrade
+
+- Actualizamos version de nuestro core y sus dependencias
+
+````
+pnpm dlx @astrojs/upgrade
+
+git add . && git commit -m "Upgrade:astro dependencies (#011)"
+````
+
+<!--  // ──────────────────────────────────────────────── -->
